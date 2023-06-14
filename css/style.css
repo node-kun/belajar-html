@@ -1,7 +1,8 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-}
+    background-image: url('background-1.png');
+    background-image: url('background-2.png');
 
 .container {
     width: 1140px;
@@ -123,15 +124,18 @@ body{
 
 .jobs{
     text-align: left;
+    padding-bottom: 80px;
 }
 
 .jobs-headline{
+    margin: 0 0 17px 0;
     font-size: inherit;
     font-weight: 600;
 }
 
 .jobs-list{
     display: flex;
+    gap: 30px;
 }
 
 .job{
@@ -140,6 +144,26 @@ body{
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 30px 60px rgba(0, 26, 255, 0.1);
+}
+
+.job:hover{
+    background-color: #001aff;
+    transition: all 0.7s;
+}
+
+.job:hover .job-title,
+.job:hover .job-salary{
+    color: #fff;
+}
+
+.job:hover .job-company,
+.job:hover .job-description{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.job:hover .job-tag{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff; 
 }
 
 .job-header{
@@ -173,7 +197,12 @@ body{
 .job-description{
     margin: 17px 0;
     color: rgba(0, 0, 0, 0.8);
-    line-height: 26px;
+    line-height: 30px;
+}
+
+.job-devider{
+    margin: 25px 0;
+    border-color: rgba(0, 0, 0, .05);   
 }
 
 .job-footer{
@@ -181,19 +210,16 @@ body{
     align-items: center;
 }
 
-.job-devider{
-    margin: 25px 0;
-    border-color: rgba(0, 0, 0, .15);
+.job-tag{
+    padding: 5px 15px;
+    border-radius: 100%;
     font-size: 16px;
     font-weight: 600;
     background-color: rgba(0, 0, 0, .07);
 }
 
-.job-tags{
-    padding: 5px 15px;
-    border-radius: 100%;
-}
-
 .job-salary{
     margin-left: auto;
+    font-size: 14px;
+    font-weight: 600;
 }
